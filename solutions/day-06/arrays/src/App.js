@@ -1,4 +1,5 @@
 import "./App.css";
+import NumberGrid from "./components/NumberGrid";
 
 function App() {
   const numbers = [1, 2, 3, 4, 5];
@@ -54,6 +55,12 @@ function App() {
     return <div className="countries">{countryList}</div>;
   };
 
+  let gridNumbers = [];
+  for (let i = 0; i < 33; i++) {
+    gridNumbers.push(i);
+  }
+  console.log(gridNumbers);
+
   return (
     <div className="container">
       <div>
@@ -65,6 +72,8 @@ function App() {
         <h1>Countries List</h1>
         <Countries countries={countries} />
       </div>
+
+      <NumberGrid numbers={gridNumbers} />
     </div>
   );
 }
